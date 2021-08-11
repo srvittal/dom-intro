@@ -6,7 +6,7 @@ const totalTwoElement = document.querySelector(".totalTwo");
 var callsTotal = 0;
 var smsTotal = 0;
 
-function radioBillTotal(checkedRadioBtn) {
+function radioBillTotal() {
     var checkedRadioBtn = document.querySelector(".billItemTypeRadio:checked");
 
     if (checkedRadioBtn.value === "call") {
