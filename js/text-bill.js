@@ -3,6 +3,7 @@ const addToBillButtonElement = document.querySelector(".addToBillBtn");
 const callTotalOneElement = document.querySelector(".callTotalOne");
 const smsTotalOneElement = document.querySelector(".smsTotalOne");
 const totalOneElement = document.querySelector(".totalOne");
+const totalCost_billElement = document.querySelector(".totalCost_bill");
 
 var callsTotal = 0;
 var smsTotal = 0;
@@ -25,10 +26,10 @@ function textBillTotal() {
     totalOneElement.classList.remove("warning", "danger");
 
     if (costTotal >= 30 && costTotal < 50) {
-        totalOneElement.classList.add("warning");
+        totalCost_billElement.classList.add("warning");
     }
     else if (costTotal >= 50) {
-        totalOneElement.classList.add("danger");
+        totalCost_billElement.classList.add("danger");
     }
 }
 

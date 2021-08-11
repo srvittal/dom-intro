@@ -2,6 +2,7 @@ const radioBillAddBtnElement = document.querySelector(".radioBillAddBtn");
 const callTotalTwoElement = document.querySelector(".callTotalTwo");
 const smsTotalTwoElement = document.querySelector(".smsTotalTwo");
 const totalTwoElement = document.querySelector(".totalTwo");
+const totalCost_RadioElement = document.querySelector(".totalCost_Radio");
 
 var callsTotal = 0;
 var smsTotal = 0;
@@ -24,10 +25,10 @@ function radioBillTotal() {
     totalTwoElement.classList.remove("warning", "danger");
 
     if (costTotal >= 30 && costTotal < 50) {
-        totalTwoElement.classList.add("warning");
+        totalCost_RadioElement.classList.add("warning");
     }
     else if (costTotal >= 50) {
-        totalTwoElement.classList.add("danger");
+        totalCost_RadioElement.classList.add("danger");
     }
 }
 

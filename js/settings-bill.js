@@ -7,6 +7,7 @@ const updateBtnsettings = document.querySelector(".updateSettings");
 const callTotalSettingsElement = document.querySelector(".callTotalSettings");
 const smsTotalSettingsElement = document.querySelector(".smsTotalSettings");
 const totalSettingsElement = document.querySelector(".totalSettings");
+const totalCost_SettingsElement = document.querySelector(".totalCost_Settings");
 
 // Default settings 
 var callCostSetting = 2.75;
@@ -52,10 +53,10 @@ function settingsBillTotal() {
     totalSettingsElement.classList.remove("warning", "danger");
 
     if (costTotal >= warningLevelSetting && costTotal < criticalLevel) {
-        totalSettingsElement.classList.add("warning");
+        totalCost_SettingsElement.classList.add("warning");
     }
     else if (costTotal >= criticalLevel) {
-        totalSettingsElement.classList.add("danger");
+        totalCost_SettingsElement.classList.add("danger");
     }
 }
 

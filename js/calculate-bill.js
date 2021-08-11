@@ -1,6 +1,7 @@
 const calculateButtonElement = document.querySelector(".calculateBtn");
 const billTotalElement = document.querySelector(".billTotal");
 const billStringElement = document.querySelector(".billString");
+const totalCost_StringElement = document.querySelector(".totalCost_String");  
 
 function totalPhoneBill(usage) {
     var arrUsage = usage.trim().split(/,\s*/);
@@ -28,13 +29,13 @@ function calculateBtnClicked() {
     var billTotal = totalPhoneBill(billString);
     billTotalElement.innerHTML = billTotal;
 
-    billTotalElement.classList.remove("warning", "danger");
+    totalCost_StringElement.classList.remove("warning", "danger");
 
     if (billTotal >= 20 && billTotal < 30) {
-        billTotalElement.classList.add("warning");
+        totalCost_StringElement.classList.add("warning");
     }
     else if (billTotal >= 30) {
-        billTotalElement.classList.add("danger");
+        totalCost_StringElement.classList.add("danger");
     }
 }
 
