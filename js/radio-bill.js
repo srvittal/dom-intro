@@ -27,7 +27,7 @@ function radioBillTotal() {
     if (costTotalTwo >= 30 && costTotalTwo < 50) {
         totalCost_RadioElement.classList.add("warning");
     }
-    else if (costTotal >= 50) {
+    else if (costTotalTwo >= 50) {
         totalCost_RadioElement.classList.add("danger");
     }
 }
