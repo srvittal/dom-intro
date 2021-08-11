@@ -4,27 +4,27 @@ const smsTotalTwoElement = document.querySelector(".smsTotalTwo");
 const totalTwoElement = document.querySelector(".totalTwo");
 const totalCost_RadioElement = document.querySelector(".totalCost_Radio");
 
-var callsTotal = 0;
-var smsTotal = 0;
+var callsTotalTwo = 0; 
+var smsTotalTwo = 0;
 
 function radioBillTotal() {
     var checkedRadioBtn = document.querySelector(".billItemTypeRadio:checked");
 
     if (checkedRadioBtn.value === "call") {
-        callsTotal += 2.75;
+        callsTotalTwo += 2.75;
     } else if (checkedRadioBtn.value === "sms") {
-        smsTotal += 0.75;
+        smsTotalTwo += 0.75;
     }
 
-    callTotalTwoElement.innerHTML = callsTotal.toFixed(2);
-    smsTotalTwoElement.innerHTML = smsTotal.toFixed(2);
-    var costTotal = callsTotal + smsTotal;
-    totalTwoElement.innerHTML = costTotal.toFixed(2);
+    callTotalTwoElement.innerHTML = callsTotalTwo.toFixed(2);
+    smsTotalTwoElement.innerHTML = smsTotalTwo.toFixed(2);
+    var costTotalTwo = callsTotalTwo + smsTotalTwo;
+    totalTwoElement.innerHTML = costTotalTwo.toFixed(2);
 
 
     totalTwoElement.classList.remove("warning", "danger");
 
-    if (costTotal >= 30 && costTotal < 50) {
+    if (costTotalTwo >= 30 && costTotalTwo < 50) {
         totalCost_RadioElement.classList.add("warning");
     }
     else if (costTotal >= 50) {

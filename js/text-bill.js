@@ -5,30 +5,30 @@ const smsTotalOneElement = document.querySelector(".smsTotalOne");
 const totalOneElement = document.querySelector(".totalOne");
 const totalCost_billElement = document.querySelector(".totalCost_bill");
 
-var callsTotal = 0;
-var smsTotal = 0;
+var callsTotalOne = 0;
+var smsTotalOne = 0;
 
 function textBillTotal() {
     var billTypeText = billTypeTextElement.value.trim();
 
     if (billTypeText == "call") {
-        callsTotal += 2.75;
+        callsTotalOne += 2.75;
     } else if (billTypeText == "sms") {
-        smsTotal += 0.75;
+        smsTotalOne += 0.75;
     }
 
-    callTotalOneElement.innerHTML = callsTotal.toFixed(2);
-    smsTotalOneElement.innerHTML = smsTotal.toFixed(2);
-    var costTotal = callsTotal + smsTotal;
-    totalOneElement.innerHTML = costTotal.toFixed(2);
+    callTotalOneElement.innerHTML = callsTotalOne.toFixed(2);
+    smsTotalOneElement.innerHTML = smsTotalOne.toFixed(2);
+    var costTotalOne = callsTotalOne + smsTotalOne;
+    totalOneElement.innerHTML = costTotalOne.toFixed(2);
 
 
     totalOneElement.classList.remove("warning", "danger");
 
-    if (costTotal >= 30 && costTotal < 50) {
+    if (costTotalOne >= 30 && costTotalOne < 50) {
         totalCost_billElement.classList.add("warning");
     }
-    else if (costTotal >= 50) {
+    else if (costTotalOne >= 50) {
         totalCost_billElement.classList.add("danger");
     }
 }
