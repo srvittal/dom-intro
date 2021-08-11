@@ -18,10 +18,20 @@ var callsTotal = 0;
 var smsTotal = 0;
 
 function updateSettings() {
-    callCostSetting = Number(callCostSettingElement.value);
-    smsCostSetting = Number(smsCostSettingElement.value);
-    warningLevelSetting = Number(warningLevelSettingElement.value);
-    criticalLevel = Number(criticalLevelElement.value);
+
+    if (callCostSettingElement.value != "") {
+        callCostSetting = Number(callCostSettingElement.value);
+    } 
+    if (smsCostSettingElement.value != "") {
+        smsCostSetting = Number(smsCostSettingElement.value);
+    }
+    if (warningLevelSettingElement.value != "") {
+        warningLevelSetting = Number(warningLevelSettingElement.value);
+    }
+    if (criticalLevelElement.value != "") {
+        criticalLevel = Number(criticalLevelElement.value);
+    }
+
 }
 
 function settingsBillTotal() {
