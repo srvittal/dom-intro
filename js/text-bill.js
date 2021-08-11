@@ -7,12 +7,12 @@ const totalOneElement = document.querySelector(".totalOne");
 var callsTotal = 0;
 var smsTotal = 0;
 
-function textBillTotal(){
+function textBillTotal() {
     var billTypeText = billTypeTextElement.value.trim();
 
-    if (billTypeText == "call"){
+    if (billTypeText == "call") {
         callsTotal += 2.75;
-    } else if (billTypeText == "sms"){
+    } else if (billTypeText == "sms") {
         smsTotal += 0.75;
     }
 
@@ -21,15 +21,15 @@ function textBillTotal(){
     var costTotal = callsTotal + smsTotal;
     totalOneElement.innerHTML = costTotal.toFixed(2);
 
-    
-    totalOneElement.classList.remove("warning","danger");
 
-    if (costTotal >= 30 && costTotal < 50){
+    totalOneElement.classList.remove("warning", "danger");
+
+    if (costTotal >= 30 && costTotal < 50) {
         totalOneElement.classList.add("warning");
     }
-    else if (costTotal >= 50){
+    else if (costTotal >= 50) {
         totalOneElement.classList.add("danger");
     }
 }
 
-addToBillButtonElement.addEventListener('click',textBillTotal);
+addToBillButtonElement.addEventListener('click', textBillTotal);
