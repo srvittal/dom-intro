@@ -8,14 +8,14 @@ const callTotalSettingsElement = document.querySelector(".callTotalSettings");
 const smsTotalSettingsElement = document.querySelector(".smsTotalSettings");
 const totalSettingsElement = document.querySelector(".totalSettings");
 
+// Default settings 
 var callCostSetting = 2.75;
 var smsCostSetting = 0.75;
 var warningLevelSetting = 20;
 var criticalLevel = 30;
 
-var callsTotal = 0; 
-var smsTotal = 0; 
-var billTotal = 0; 
+var callsTotal = 0;
+var smsTotal = 0;
 
 function updateSettings() {
     callCostSetting = Number(callCostSettingElement.value);
